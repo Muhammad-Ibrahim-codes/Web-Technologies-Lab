@@ -4,8 +4,55 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Registration Form</title>
+
+    <style>
+      a:hover {
+        color: yellow;
+      }
+
+      nav {
+        background-color: #333;
+        padding: 10px;
+        position: sticky;
+        top: 0;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+        justify-content: space-evenly;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+      }
+    </style>
   </head>
   <body>
+    <nav>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#labs" class="active">Lab Work</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li>
+          <a href="https://github.com/Muhammad-Ibrahim-codes" target="_blank"
+            >GitHub</a
+          >
+        </li>
+        <li>
+          <a href="https://www.uetpeshawar.edu.pk/" target="_blank"
+            >UET Website</a
+          >
+        </li>
+      </ul>
+    </nav>
+
     <form action="/action.php">
       <p>Enter your name:</p>
       <input type="text" placeholder="name" />
