@@ -1,0 +1,1 @@
+This portfolio is a static website built with HTML and CSS to showcase my academic work as a Computer Science student at UET Peshawar. It includes home, about, lab work, and contact pages with a consistent navigation bar. The design is simple and easy to update in the future.

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>404 — Page Not Found</title>
+    <style>
+      body {
+        background-color: #12121a;
+        margin: 0;
+      }
+
+      h1,
+      h2 {
+        font-family: "Times New Roman", Times, serif;
+        color: rgba(251, 249, 249, 0.8);
+      }
+
+      p,
+      a {
+        font-family: "Times New Roman", Times, serif;
+        color: rgba(251, 249, 249, 0.434);
+        font-size: 17px;
+      }
+
+      a:hover {
+        color: yellow;
+      }
+
+      nav {
+        background-color: #333;
+        padding: 10px;
+        position: sticky;
+        top: 0;
+      }
+
+      nav ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+        justify-content: space-evenly;
+      }
+
+      nav ul li a {
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+      }
+
+      nav ul li a:hover {
+        color: yellow;
+      }
+
+      .container {
+        padding: 100px 100px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      .error-code {
+        font-family: "Times New Roman", Times, serif;
+        font-size: 80px;
+        color: rgba(251, 249, 249, 0.1);
+        margin: 0;
+        line-height: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#labs">Lab Work</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li>
+          <a href="https://github.com/Muhammad-Ibrahim-codes" target="_blank"
+            >GitHub</a
+          >
+        </li>
+        <li>
+          <a href="https://www.uetpeshawar.edu.pk/" target="_blank"
+            >UET Website</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <div class="container">
+      <p class="error-code">404</p>
+      <h1>Page Not Found</h1>
+      <p>The page you are looking for does not exist or has been moved.</p>
+      <br />
+      <a href="index.html">← Back to Home</a>
+    </div>
+  </body>
+</html>
