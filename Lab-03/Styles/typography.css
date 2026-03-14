@@ -1,0 +1,101 @@
+/* General page style */
+body{
+    font-family: Arial, sans-serif;
+    margin: 30px;
+}
+
+/* GOOGLE FONTS */
+
+/* Font 1 */
+.font1{
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Font 2 */
+.font2{
+    font-family: 'Playfair Display', serif;
+}
+
+/* Font 3 */
+.font3{
+    font-family: 'Pacifico', sans-serif;
+}
+
+
+/* FONT SIZES UNITS*/
+
+.px{
+    font-size: 24px;
+}
+
+.em{
+    font-size: 2em;
+}
+
+.rem{
+    font-size: 1.5rem;
+}
+
+.percent{
+    font-size: 150%;
+}
+
+
+/* TEXT ALIGNMENT */
+
+.left{
+    text-align: left;
+}
+
+.center{
+    text-align: center;
+}
+
+.right{
+    text-align: right;
+}
+
+.justify{
+    text-align: justify;
+}
+
+
+/* TEXT DECORATION */
+
+.underline{
+    text-decoration: underline;
+}
+
+.overline{
+    text-decoration: overline;
+}
+
+.line{
+    text-decoration: line-through;
+}
+
+
+/* TEXT TRANSFORMATION */
+
+.upper{
+    text-transform: uppercase;
+}
+
+.lower{
+    text-transform: lowercase;
+}
+
+.capital{
+    text-transform: capitalize;
+}
+
+
+/* TEXT SHADOW */
+
+.shadow1{
+    text-shadow: 2px 2px 5px gray;
+}
+
+.shadow2{
+    text-shadow: 3px 3px 6px blue;
+}
