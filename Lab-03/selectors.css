@@ -1,0 +1,108 @@
+   /* Basic Selectore */
+
+   /* Element selector */
+      p {
+        color: blue;
+      }
+
+      /* Class selector */
+      .box {
+        border: 2px solid black;
+        padding: 10px;
+      }
+
+      /* ID selector */
+      #title {
+        color: red;
+      }
+
+      /* Universal selector */
+      * {
+        font-family: Arial;
+      }
+
+      /* Group selector */
+      h2,
+      h3 {
+        color: green;
+      }
+
+      /* ATTRIBUTE SELECTORS */
+
+      /* Has attribute */
+      input[type] {
+        background-color: lightyellow;
+      }
+
+      /* Exact value */
+      input[type="text"] {
+        border: 2px solid blue;
+      }
+
+      /* Starts with */
+      a[href^="https"] {
+        color: purple;
+      }
+
+      /* COMBINATORS */
+
+      /* Descendant */
+      div p {
+        background-color: lightgray;
+      }
+
+      /* Child */
+      ul > li {
+        color: darkblue;
+      }
+
+      /* Adjacent sibling */
+      h2 + p {
+        font-style: italic;
+      }
+
+      /* General sibling */
+      h3 ~ p {
+        color: brown;
+      }
+
+      /* PSEUDO CLASSES */
+
+      /* 1 */
+      a:hover {
+        color: orange;
+      }
+
+      /* 2 */
+      li:first-child {
+        font-weight: bold;
+      }
+
+      /* 3 */
+      li:last-child {
+        color: red;
+      }
+
+      /* 4 */
+      input:focus {
+        background-color: lightblue;
+      }
+
+      /* 5 */
+      button:active {
+        background-color: gray;
+      }
+
+      /* PSEUDO ELEMENTS */
+
+      /* 1 */
+      p::first-letter {
+        font-size: 30px;
+        color: darkred;
+      }
+
+      /* 2 */
+      p::after {
+        content: " ✔";
+        color: green;
+      }
