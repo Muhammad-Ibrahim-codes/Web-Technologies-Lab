@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.nav-horizontal ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #007BFF;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.nav-horizontal ul li {
+    position: relative;
+}
+
+.nav-horizontal ul li a {
+    display: block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.nav-horizontal ul li a:hover,
+.nav-horizontal ul li a.active {
+    background-color: #0056b3;
+}
+
+.nav-horizontal ul li .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #007BFF;
+    min-width: 180px;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+    z-index: 100;
+    flex-direction: column;
+}
+
+.nav-horizontal ul li:hover .dropdown-menu {
+    display: flex;
+}
+
+.nav-horizontal ul li .dropdown-menu li a {
+    padding: 10px 20px;
+}
+
+.nav-vertical {
+    margin-top: 50px;
+    display: inline-block;
+    text-align: left;
+}
+
+.nav-vertical ul {
+    list-style: none;
+    background-color: #28a745;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.nav-vertical ul li {
+    position: relative;
+}
+
+.nav-vertical ul li a {
+    display: block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.nav-vertical ul li a:hover,
+.nav-vertical ul li a.active {
+    background-color: #1e7e34;
+}
+
+.nav-vertical ul li .dropdown-menu {
+    display: none;
+    flex-direction: column;
+    background-color: #28a745;
+}
+
+.nav-vertical ul li:hover .dropdown-menu {
+    display: flex;
+}
+
+.nav-vertical ul li .dropdown-menu li a {
+    padding: 10px 25px;
+}
+
+@media (max-width: 768px) {
+    .nav-horizontal ul {
+        flex-direction: column;
+    }
+
+    .nav-horizontal ul li .dropdown-menu {
+        position: static;
+    }
+}
