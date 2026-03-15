@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Styling</title>
+    <link rel="stylesheet" href="/Lab-03/Styles/textform.css" />
+  </head>
+
+  <body>
+    <h1>Registration Form</h1>
+
+    <div class="form-container">
+      <form>
+        <label>Full Name</label>
+        <input type="text" placeholder="Enter your name" />
+
+        <label>Email</label>
+        <input type="email" placeholder="Enter your email" />
+
+        <label>Password</label>
+        <input type="password" placeholder="Enter your password" />
+
+        <label>Country</label>
+        <select>
+          <option>Select Country</option>
+          <option>Pakistan</option>
+          <option>USA</option>
+          <option>UK</option>
+        </select>
+
+        <label>Gender</label>
+        <select>
+          <option>Select Gender</option>
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+
+        <!-- Error message -->
+        <p class="error-message">Invalid email address</p>
+
+        <button type="submit">Register</button>
+      </form>
+
+      <div class="success-message">Registration Successful!</div>
+    </div>
+  </body>
+</html>
