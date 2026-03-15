@@ -6,22 +6,92 @@
     <title>Time table</title>
 
     <style>
-      table,
+      /* General table styling */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+        font-family: Arial, sans-serif;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
       th,
       td {
-        border: 1px solid black;
-        border-collapse: collapse;
-        padding: 8px;
+        border: 1px solid #444;
+        padding: 10px;
         text-align: center;
       }
+
       th {
+        background-color: #333;
+        color: #fff;
         white-space: nowrap;
       }
 
-      a:hover {
-        color: yellow;
+      /* Zebra striping */
+      tbody tr:nth-child(even) {
+        background-color: #f2f2f2;
       }
 
+      /* Hover effect */
+      tbody tr:hover {
+        background-color: #ffe599;
+        transition: background-color 0.3s;
+      }
+
+      /* Color-coded course types */
+      .theory {
+        background-color: #cfe2f3; /* light blue */
+      }
+
+      .lab {
+        background-color: #d9ead3; /* light green */
+      }
+
+      .other {
+        background-color: #f4cccc; /* light red */
+      }
+
+      /* Responsive table */
+      @media screen and (max-width: 900px) {
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+          display: block;
+        }
+
+        thead tr {
+          position: absolute;
+          top: -9999px;
+          left: -9999px;
+        }
+
+        tr {
+          margin-bottom: 15px;
+          border: 1px solid #ccc;
+          border-radius: 8px;
+          padding: 10px;
+        }
+
+        td {
+          border: none;
+          position: relative;
+          padding-left: 50%;
+          text-align: left;
+        }
+
+        td::before {
+          content: attr(data-label);
+          position: absolute;
+          left: 10px;
+          font-weight: bold;
+        }
+      }
+
+      /* Navigation styling */
       nav {
         background-color: #333;
         padding: 10px;
@@ -42,6 +112,11 @@
         color: white;
         text-decoration: none;
         font-size: 16px;
+      }
+
+      nav ul li a:hover,
+      nav ul li a.active {
+        color: yellow;
       }
     </style>
   </head>
@@ -83,55 +158,71 @@
 
       <tbody>
         <tr>
-          <td>Monday</td>
-          <td colspan="3">Linear Algebra</td>
-          <td colspan="2">Operating System</td>
-          <td colspan="1">--</td>
-          <td colspan="3">AI Lab</td>
+          <td data-label="Days">Monday</td>
+          <td colspan="3" class="theory" data-label="9:00-11:00">
+            Linear Algebra
+          </td>
+          <td colspan="2" class="theory" data-label="11:00-12:20">
+            Operating System
+          </td>
+          <td class="other" data-label="12:20-1:00">--</td>
+          <td colspan="3" class="lab" data-label="1:00-3:00">AI Lab</td>
         </tr>
 
         <tr>
-          <td>Tuesday</td>
-          <td colspan="2">Data Science Theory</td>
-          <td colspan="1">--</td>
-          <td colspan="3">Data Science Lab</td>
-          <td colspan="3">Web Tech Theory</td>
+          <td data-label="Days">Tuesday</td>
+          <td colspan="2" class="theory" data-label="9:00-10:20">
+            Data Science Theory
+          </td>
+          <td class="other" data-label="10:20-11:00">--</td>
+          <td colspan="3" class="lab" data-label="11:00-12:20">
+            Data Science Lab
+          </td>
+          <td colspan="3" class="theory" data-label="1:00-3:00">
+            Web Tech Theory
+          </td>
         </tr>
 
         <tr>
-          <td>Wednesday</td>
-          <td colspan="3">--</td>
-          <td colspan="3">Web Tech Lab</td>
-          <td colspan="3">--</td>
+          <td data-label="Days">Wednesday</td>
+          <td colspan="3" class="other" data-label="9:00-11:00">--</td>
+          <td colspan="3" class="lab" data-label="11:00-12:20">Web Tech Lab</td>
+          <td colspan="3" class="other" data-label="1:00-3:00">--</td>
         </tr>
 
         <tr>
-          <td>Thursday</td>
-          <td colspan="3">Operating System Lab</td>
-          <td colspan="3">Applied Physics</td>
-          <td colspan="2">AI Theory</td>
-          <td>--</td>
+          <td data-label="Days">Thursday</td>
+          <td colspan="3" class="lab" data-label="9:00-11:00">
+            Operating System Lab
+          </td>
+          <td colspan="3" class="theory" data-label="11:00-12:20">
+            Applied Physics
+          </td>
+          <td colspan="2" class="theory" data-label="1:00-2:20">AI Theory</td>
+          <td class="other" data-label="2:20-3:00">--</td>
         </tr>
 
         <tr>
-          <td>Friday</td>
-          <td colspan="3">Mutalia Quran Hakeem</td>
-          <td colspan="3">--</td>
-          <td colspan="3">--</td>
+          <td data-label="Days">Friday</td>
+          <td colspan="3" class="other" data-label="9:00-11:00">
+            Mutalia Quran Hakeem
+          </td>
+          <td colspan="3" class="other" data-label="11:00-12:20">--</td>
+          <td colspan="3" class="other" data-label="1:00-3:00">--</td>
         </tr>
 
         <tr>
-          <td>Saturday</td>
-          <td colspan="3">--</td>
-          <td colspan="3">--</td>
-          <td colspan="3">--</td>
+          <td data-label="Days">Saturday</td>
+          <td colspan="3" class="other" data-label="9:00-11:00">--</td>
+          <td colspan="3" class="other" data-label="11:00-12:20">--</td>
+          <td colspan="3" class="other" data-label="1:00-3:00">--</td>
         </tr>
 
         <tr>
-          <td>Sunday</td>
-          <td colspan="3">--</td>
-          <td colspan="3">--</td>
-          <td colspan="3">--</td>
+          <td data-label="Days">Sunday</td>
+          <td colspan="3" class="other" data-label="9:00-11:00">--</td>
+          <td colspan="3" class="other" data-label="11:00-12:20">--</td>
+          <td colspan="3" class="other" data-label="1:00-3:00">--</td>
         </tr>
       </tbody>
     </table>

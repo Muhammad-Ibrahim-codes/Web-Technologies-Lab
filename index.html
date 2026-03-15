@@ -6,34 +6,45 @@
     <title>Muhammad Ibrahim | Portfolio</title>
     <style>
       body {
-        background-color: #12121a;
+        background: linear-gradient(120deg, #12121a, #1f1f2a);
         margin: 0;
+        font-family: "Inter", Arial, sans-serif;
+        color: rgba(251, 249, 249, 0.85);
+        line-height: 1.6;
+        scroll-behavior: smooth;
       }
 
       h1,
       h2,
       h3 {
-        font-family: "Times New Roman", Times, serif;
-        color: rgba(251, 249, 249, 0.8);
+        font-family: "Merriweather", Georgia, serif;
+        color: #fdfdfd;
+        margin-bottom: 12px;
       }
 
       p,
-      a,
-      li {
-        font-family: "Times New Roman", Times, serif;
-        color: rgba(251, 249, 249, 0.434);
+      li,
+      a {
         font-size: 17px;
+        color: rgba(251, 249, 249, 0.7);
+      }
+
+      a {
+        transition: all 0.3s ease;
       }
 
       a:hover {
-        color: yellow;
+        color: #ffd700;
       }
 
+      /* Navigation */
       nav {
-        background-color: #333;
-        padding: 10px;
+        background-color: rgba(31, 31, 42, 0.95);
+        padding: 15px 10px;
         position: sticky;
         top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
       }
 
       nav ul {
@@ -41,26 +52,58 @@
         margin: 0;
         padding: 0;
         display: flex;
-        gap: 20px;
-        justify-content: space-evenly;
+        flex-wrap: wrap;
+        gap: 15px;
+        justify-content: center;
       }
 
       nav ul li a {
-        color: white;
+        color: #fff;
         text-decoration: none;
         font-size: 16px;
+        padding: 8px 15px;
+        border-radius: 5px;
       }
 
       nav ul li a:hover {
-        color: yellow;
+        background-color: #ffd700;
+        color: #12121a;
       }
 
+      /* Sections */
       section {
-        padding: 60px 100px;
+        padding: 60px 15%;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        transition: background 0.3s ease;
       }
 
-      /* Lab cards */
+      section:nth-child(even) {
+        background: rgba(255, 255, 255, 0.02);
+        border-radius: 10px;
+      }
+
+      section h2 {
+        border-bottom: 2px solid #ffd700;
+        display: inline-block;
+        padding-bottom: 5px;
+        margin-bottom: 20px;
+      }
+
+      /* UET Badge */
+      .uet-badge {
+        display: inline-block;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 8px 18px;
+        font-family: "Merriweather", serif;
+        color: rgba(251, 249, 249, 0.5);
+        font-size: 14px;
+        letter-spacing: 2px;
+        margin-bottom: 20px;
+        background-color: rgba(255, 255, 255, 0.03);
+        border-radius: 5px;
+      }
+
+      /* Lab List */
       .lab-list {
         list-style: none;
         padding: 0;
@@ -71,32 +114,56 @@
 
       .lab-list li a {
         display: block;
-        padding: 12px 20px;
+        padding: 14px 20px;
         border: 1px solid rgba(255, 255, 255, 0.15);
         text-decoration: none;
-        color: rgba(251, 249, 249, 0.6);
+        color: rgba(251, 249, 249, 0.7);
         width: 300px;
+        transition: all 0.3s ease;
+        border-radius: 6px;
+        background: rgba(255, 255, 255, 0.01);
       }
 
       .lab-list li a:hover {
-        border-color: yellow;
-        color: yellow;
+        border-color: #ffd700;
+        color: #ffd700;
+        background-color: rgba(255, 215, 0, 0.1);
+        transform: translateX(5px);
       }
 
-      /* UET badge */
-      .uet-badge {
+      section a {
         display: inline-block;
-        border: 1px solid rgba(255, 255, 255, 0.2);
-        padding: 8px 18px;
-        font-family: "Times New Roman", Times, serif;
-        color: rgba(251, 249, 249, 0.5);
-        font-size: 14px;
-        letter-spacing: 2px;
-        margin-bottom: 20px;
+        padding: 10px 20px;
+        margin-top: 10px;
+        border: 1px solid #ffd700;
+        border-radius: 5px;
+        text-decoration: none;
+        color: #ffd700;
+        transition: 0.3s ease;
+      }
+
+      section a:hover {
+        background-color: #ffd700;
+        color: #12121a;
+        transform: scale(1.05);
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        section {
+          padding: 40px 10%;
+        }
+        nav ul {
+          flex-direction: column;
+        }
+        .lab-list li a {
+          width: 100%;
+        }
       }
     </style>
   </head>
   <body>
+    <!-- Navigation -->
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
@@ -117,7 +184,7 @@
       <h1>Muhammad Ibrahim</h1>
       <p>
         Undergraduate Computer Science student at the University of Engineering
-        &amp; Technology, Peshawar.
+        & Technology, Peshawar.
       </p>
       <p>
         This portfolio contains my academic lab work, projects, and contact
@@ -125,7 +192,6 @@
       </p>
       <br />
       <a href="#labs">View Lab Work →</a>
-      &nbsp;&nbsp;
       <a href="https://github.com/Muhammad-Ibrahim-codes" target="_blank"
         >GitHub Profile →</a
       >
@@ -143,9 +209,8 @@
         software engineering. I enjoy building things from scratch and learning
         by doing.
       </p>
-      <br />
       <h3>Details</h3>
-      <p>University: University of Engineering &amp; Technology, Peshawar</p>
+      <p>University: University of Engineering & Technology, Peshawar</p>
       <p>Degree: B.Sc. Computer Science</p>
       <p>
         GitHub:
@@ -161,7 +226,6 @@
       <p>
         Exercises completed as part of my coursework. Click to open each lab.
       </p>
-      <br />
       <ul class="lab-list">
         <li><a href="Lab-02/navigation.html">Navigation menu</a></li>
         <li><a href="Lab-02/profile.html">Profile</a></li>
@@ -176,7 +240,7 @@
       <h2>Contact</h2>
       <p>
         Email:
-        <a href="mailto:muhammadibrahimdoaba@gmail.comk"
+        <a href="mailto:muhammadibrahimdoaba@gmail.com"
           >muhammadibrahimdoaba@gmail.com</a
         >
       </p>
