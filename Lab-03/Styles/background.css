@@ -30,23 +30,23 @@
 
       /* Image backgrounds */
       .bg-image-repeat {
-        background-image: url("/Lab-03/Images/pexels-felix-mittermeier-956981.jpg");
+        background-image: url("/Lab-03/Images/Background/pexels-felix-mittermeier-956981.jpg");
         background-repeat: repeat;
       }
 
       .bg-image-no-repeat {
-        background-image: url("/Lab-03/Images/pexels-bess-hamiti-83687-36764.jpg");
+        background-image: url("/Lab-03/Images/Background/pexels-bess-hamiti-83687-36764.jpg");
         background-repeat: no-repeat;
         background-position: center;
       }
 
       .bg-image-repeat-x {
-        background-image: url("/Lab-03/Images/pexels-felix-mittermeier-956981.jpg");
+        background-image: url("/Lab-03/Images/Background/pexels-felix-mittermeier-956981.jpg");
         background-repeat: repeat-x;
       }
 
       .bg-image-repeat-y {
-        background-image: url("/Lab-03/Images/pexels-felix-mittermeier-956981.jpg");
+        background-image: url("/Lab-03/Images/Background/pexels-felix-mittermeier-956981.jpg");
         background-repeat: repeat-y;
       }
 
@@ -62,8 +62,8 @@
       /* Multiple background layers */
       .multiple-layers {
         background-image:
-          url("/Lab-03/Images/pexels-felix-mittermeier-956981.jpg"),
-          url("/Lab-03/Images/pexels-bess-hamiti-83687-36764.jpg");
+          url("/Lab-03/Images/Background/pexels-felix-mittermeier-956981.jpg"),
+          url("/Lab-03/Images/Background/pexels-bess-hamiti-83687-36764.jpg");
         background-position:
           top left,
           bottom right;
@@ -72,7 +72,7 @@
 
       /* Background blend modes */
       .blend-mode {
-        background-image: url("/Lab-03/Images/pexels-bess-hamiti-83687-36764.jpg");
+        background-image: url("/Lab-03/Images/Background/pexels-bess-hamiti-83687-36764.jpg");
         background-color: rgba(255, 165, 0, 0.6);
         background-blend-mode: multiply;
         background-size: cover;
