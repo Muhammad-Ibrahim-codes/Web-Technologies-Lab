@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positioning Challenge</title>
+    <link rel="stylesheet" href="/Lab 05_06/Styles/position.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>My Website</h1>
+      <a href="#modal" class="btn">Open Modal</a>
+    </header>
+
+    <div class="container">
+      <aside class="sidebar">
+        <div class="sticky-box">Sticky Box 1</div>
+        <div class="sticky-box">Sticky Box 2</div>
+      </aside>
+
+      <main class="content">
+        <h2>Main Content</h2>
+        <p>Scroll down to see sticky behavior...</p>
+
+        <div class="box red">Z-Index 1</div>
+        <div class="box green">Z-Index 2</div>
+        <div class="box blue">Z-Index 3</div>
+
+        <p style="margin-top: 800px">End of content</p>
+      </main>
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <h2>Modal Dialog</h2>
+        <p>This is a CSS-only modal.</p>
+        <a href="#" class="btn close">Close</a>
+      </div>
+    </div>
+  </body>
+</html>
