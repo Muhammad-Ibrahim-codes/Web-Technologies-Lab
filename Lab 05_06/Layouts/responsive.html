@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Data Table</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 2rem;
+        background: #f5f5f5;
+        color: #333;
+      }
+
+      h1 {
+        text-align: center;
+        margin-bottom: 2rem;
+      }
+
+      .table-container {
+        overflow-x: auto;
+      }
+
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        background: #fff;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      caption {
+        caption-side: top;
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+      }
+
+      th,
+      td {
+        padding: 0.75rem 1rem;
+        border: 1px solid #ddd;
+        text-align: left;
+      }
+
+      th {
+        background: #0077cc;
+        color: #fff;
+      }
+
+      @media (max-width: 1024px) {
+        table,
+        thead,
+        tbody,
+        th,
+        td,
+        tr {
+          display: block;
+        }
+
+        thead tr {
+          display: none;
+        }
+
+        tbody tr {
+          margin-bottom: 1rem;
+          background: #fff;
+          border: 1px solid #ddd;
+          padding: 1rem;
+          border-radius: 8px;
+          box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        td {
+          display: flex;
+          justify-content: space-between;
+          padding: 0.5rem 0;
+          border: none;
+          border-bottom: 1px solid #eee;
+          position: relative;
+        }
+
+        td::before {
+          content: attr(data-label);
+          font-weight: bold;
+          flex-basis: 40%;
+          color: #555;
+        }
+
+        td:last-child {
+          border-bottom: none;
+        }
+      }
+
+      @media (max-width: 600px) {
+        td {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        td::before {
+          margin-bottom: 0.25rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Employee Data</h1>
+      <section class="table-container">
+        <table>
+          <caption>
+            Employee Records
+          </caption>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Position</th>
+              <th>Department</th>
+              <th>Email</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>John Doe</td>
+              <td>Software Engineer</td>
+              <td>Development</td>
+              <td>john.doe@example.com</td>
+              <td>Active</td>
+            </tr>
+            <tr>
+              <td>Jane Smith</td>
+              <td>Project Manager</td>
+              <td>Operations</td>
+              <td>jane.smith@example.com</td>
+              <td>Inactive</td>
+            </tr>
+            <tr>
+              <td>Ali Khan</td>
+              <td>UI/UX Designer</td>
+              <td>Design</td>
+              <td>ali.khan@example.com</td>
+              <td>Active</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>
