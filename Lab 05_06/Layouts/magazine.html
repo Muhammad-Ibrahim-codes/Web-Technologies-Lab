@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Magazine Layout</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+      }
+
+      body {
+        line-height: 1.5;
+        color: #333;
+      }
+
+      header,
+      footer {
+        text-align: center;
+        padding: 1rem;
+        background-color: #f4f4f4;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .grid-container {
+        display: grid;
+        gap: 1rem;
+        padding: 1rem;
+      }
+
+      @media (min-width: 1024px) {
+        .grid-container {
+          grid-template-areas:
+            "feature feature news"
+            "feature feature side"
+            "ad ad ad";
+          grid-template-columns: 2fr 2fr 1fr;
+        }
+        .feature {
+          grid-area: feature;
+        }
+        .news {
+          grid-area: news;
+        }
+        .side {
+          grid-area: side;
+        }
+        .ad {
+          grid-area: ad;
+        }
+      }
+
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .grid-container {
+          grid-template-columns: 1fr 1fr;
+          grid-template-areas:
+            "feature feature"
+            "news news"
+            "side side"
+            "ad ad";
+        }
+      }
+
+      @media (max-width: 767px) {
+        .grid-container {
+          grid-template-columns: 1fr;
+          grid-template-areas:
+            "feature"
+            "news"
+            "news"
+            "news"
+            "side"
+            "side"
+            "ad";
+        }
+      }
+
+      .grid-container article {
+        padding: 1rem;
+        border: 1px solid #ddd;
+        background-color: #fff;
+      }
+
+      .feature {
+        background-color: #ffe4c4;
+      }
+
+      .news {
+        background-color: #e0f7fa;
+      }
+
+      .side {
+        background-color: #f1f8e9;
+      }
+
+      .ad {
+        background-color: #ffebee;
+        text-align: center;
+      }
+
+      article {
+        font-size: 1rem;
+      }
+
+      @media (min-width: 768px) {
+        article {
+          font-size: 1.1rem;
+        }
+      }
+
+      @media (min-width: 1024px) {
+        article {
+          font-size: 1.2rem;
+        }
+      }
+
+      footer {
+        margin-top: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>CS 224L Web Technologies</h1>
+      <h2>Magazine Layout Demo</h2>
+      <p>Mr. Mohammad, Lecturer</p>
+      <p>
+        Department of Computer Science, University of Engineering & Technology,
+        Peshawar
+      </p>
+    </header>
+
+    <main class="grid-container">
+      <article class="feature">Feature Article</article>
+      <article class="news">News Story 1</article>
+      <article class="news">News Story 2</article>
+      <article class="news">News Story 3</article>
+      <article class="side">Sidebar 1</article>
+      <article class="side">Sidebar 2</article>
+      <article class="ad">Advertisement</article>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 CS 224L | All rights reserved</p>
+    </footer>
+  </body>
+</html>
