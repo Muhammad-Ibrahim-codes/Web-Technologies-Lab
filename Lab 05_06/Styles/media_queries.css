@@ -1,0 +1,127 @@
+ body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.5;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      header {
+        background-color: #4caf50;
+        color: white;
+        padding: 1rem;
+        text-align: center;
+      }
+
+      nav {
+        display: flex;
+        flex-direction: column;
+        background-color: #333;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #444;
+      }
+
+      nav a:hover {
+        background-color: #444;
+      }
+
+      .breakpoint {
+        text-align: center;
+        margin: 1rem 0;
+        font-weight: bold;
+      }
+
+      .content {
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+      }
+
+      .card {
+        background-color: white;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      @media (min-width: 600px) {
+        nav {
+          flex-direction: row;
+          justify-content: center;
+        }
+        nav a {
+          border-bottom: none;
+          border-right: 1px solid #444;
+        }
+        nav a:last-child {
+          border-right: none;
+        }
+
+        .content {
+          flex-direction: row;
+          flex-wrap: wrap;
+        }
+
+        .card {
+          flex: 1 1 calc(50% - 1rem);
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        p {
+          font-size: 1.1rem;
+        }
+
+        .breakpoint::after {
+          content: " (Tablet)";
+        }
+      }
+
+      @media (min-width: 1024px) {
+        .card {
+          flex: 1 1 calc(33% - 1rem);
+        }
+
+        h1 {
+          font-size: 2.5rem;
+        }
+
+        p {
+          font-size: 1.2rem;
+        }
+
+        .breakpoint::after {
+          content: " (Desktop)";
+        }
+      }
+
+      @media (min-width: 1440px) {
+        h1 {
+          font-size: 3rem;
+        }
+
+        p {
+          font-size: 1.3rem;
+        }
+
+        .breakpoint::after {
+          content: " (XL Desktop)";
+        }
+      }
