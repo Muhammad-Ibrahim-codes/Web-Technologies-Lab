@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    color: white;
+    padding: 15px 20px;
+    position: relative;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+}
+
+.nav a:hover {
+    background: #555;
+    border-radius: 4px;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    background: #444;
+    top: 100%;
+    left: 0;
+    flex-direction: column;
+    min-width: 150px;
+}
+
+.dropdown-menu li {
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    background: white;
+    height: 3px;
+    width: 25px;
+    margin: 4px;
+}
+
+#menu-toggle {
+    display: none;
+}
+
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 220px;
+    background: #222;
+    color: white;
+    padding: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar .dropdown-menu {
+    position: static;
+    display: none;
+    background: #333;
+}
+
+.sidebar .dropdown:hover .dropdown-menu {
+    display: flex;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+
+    .hamburger {
+        display: flex;
+    }
+
+    .nav {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: #333;
+
+        transform: translateY(-100%);
+        transition: transform 0.3s ease;
+    }
+
+    #menu-toggle:checked + .hamburger + .nav {
+        transform: translateY(0);
+    }
+
+    .nav ul {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .dropdown-menu {
+        position: static;
+    }
+
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+}

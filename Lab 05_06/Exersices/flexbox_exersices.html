@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox Navigation</title>
+    <link rel="stylesheet" href="/Lab 05_06/Styles/flexbox.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">MySite</div>
+
+      <input type="checkbox" id="menu-toggle" />
+      <label for="menu-toggle" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+
+      <nav class="nav">
+        <ul>
+          <li><a href="#">Home</a></li>
+
+          <li class="dropdown">
+            <a href="#">Services</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Web</a></li>
+              <li><a href="#">App</a></li>
+              <li><a href="#">AI</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="container">
+      <aside class="sidebar">
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+
+          <li class="dropdown">
+            <a href="#">Settings</a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Profile</a></li>
+              <li><a href="#">Security</a></li>
+            </ul>
+          </li>
+
+          <li><a href="#">Logout</a></li>
+        </ul>
+      </aside>
+
+      <main class="content">
+        <h1>Responsive Flexbox Navigation</h1>
+        <p>This layout uses Flexbox and CSS</p>
+      </main>
+    </div>
+  </body>
+</html>
